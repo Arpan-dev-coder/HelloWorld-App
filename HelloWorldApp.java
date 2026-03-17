@@ -10,10 +10,17 @@ public class HelloWorldApp {
 
         } else {
 
-            // Enhanced for loop (for-each)
+            String names = "";
+
+            // Build names string with delimiter
             for (String name : args) {
-                System.out.println("Hello, " + name + "!");
+                names += name + ", ";
             }
+
+            // Remove trailing ", " using substring
+            names = names.substring(0, names.length() - 2);
+
+            System.out.println("Hello, " + names + "!");
         }
     }
 }
