@@ -3,17 +3,15 @@ public class HelloWorldApp {
 
     public static void main(String[] args) {
 
-        // Check if name provided
+        String name;
+
+        // Check if argument provided
         if (args.length > 0) {
-
-            String name = args[0];
-
-            System.out.println("Hello " + name);
-
+            name = args[0];
         } else {
-
-            System.out.println("Hello User");
-
+            name = "World";   // Default value
         }
+
+        System.out.println("Hello " + name);
     }
 }
