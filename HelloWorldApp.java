@@ -1,3 +1,7 @@
+/**
+ * UC7 – Greeting using String.join()
+ * Efficiently joins multiple names with delimiter
+ */
 
 public class HelloWorldApp {
 
@@ -10,17 +14,10 @@ public class HelloWorldApp {
 
         } else {
 
-            String names = "";
+            // Join all names with ", "
+            String joinedNames = String.join(", ", args);
 
-            // Build names string with delimiter
-            for (String name : args) {
-                names += name + ", ";
-            }
-
-            // Remove trailing ", " using substring
-            names = names.substring(0, names.length() - 2);
-
-            System.out.println("Hello, " + names + "!");
+            System.out.println("Hello, " + joinedNames + "!");
         }
     }
 }
